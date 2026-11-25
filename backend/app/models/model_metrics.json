@@ -1,0 +1,7 @@
+{
+  "evaluation_season": "2025",
+  "note": "Historical results on the chronological 2025 test season, as reported from the Colab project. They describe average performance, not the accuracy of any single prediction.",
+  "first_innings": {"label": "First innings score", "algorithm": "Random Forest Regressor", "mae": 19.65, "rmse": 26.77, "r2": 0.414},
+  "second_innings": {"label": "Second innings score", "algorithm": "Linear Regression", "mae": 14.72, "rmse": 19.23, "r2": 0.636},
+  "win_probability": {"label": "Win probability (chasing team)", "algorithm": "Random Forest Classifier", "accuracy": 0.811, "roc_auc": 0.860}
+}

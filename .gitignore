@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+backend/.env
+# Node
+node_modules/
+dist/
+frontend/.env
+*.log
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+# Large/optional data
+backend/saved_models_compressed/

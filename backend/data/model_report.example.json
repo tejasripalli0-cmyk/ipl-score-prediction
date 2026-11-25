@@ -1,0 +1,11 @@
+{
+  "_comment": "Rename to model_report.json and replace every value with your real Colab results. Remove sections you do not have.",
+  "dataset_overview": {"rows": 0, "matches": 0, "seasons": "2007/08 - 2025", "notes": ["..."]},
+  "model_comparison": [
+    {"model": "Random Forest", "task": "first_innings", "mae": 0.0, "rmse": 0.0, "r2": 0.0, "selected": true},
+    {"model": "TensorFlow neural network", "task": "first_innings", "mae": 0.0, "rmse": 0.0, "r2": 0.0, "selected": false}
+  ],
+  "shap": {
+    "first_innings": [{"feature": "cumulative_runs", "mean_abs_shap": 0.0}]
+  }
+}

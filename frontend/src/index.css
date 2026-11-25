@@ -1,0 +1,39 @@
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { color-scheme: light; }
+  body { @apply bg-paper font-sans text-ink antialiased; font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { @apply font-display tracking-tight text-navy; }
+  :focus-visible { outline: 2px solid #0F7C82; outline-offset: 2px; }
+}
+
+@layer components {
+  .card { @apply rounded-card border border-line bg-white shadow-card; }
+  .card-pad { @apply p-4 sm:p-5; }
+  .label { @apply mb-1 block text-sm font-medium text-ink; }
+  .hint { @apply mt-1 text-xs text-muted; }
+  .input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-ink placeholder:text-slate-400
+      focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal disabled:bg-slate-50 disabled:text-slate-500;
+  }
+  .input-error { @apply border-brick focus:border-brick focus:ring-brick; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-primary { @apply btn bg-navy text-white hover:bg-navy-700; }
+  .btn-secondary { @apply btn border border-slate-300 bg-white text-ink hover:bg-slate-50; }
+  .btn-ghost { @apply btn text-navy hover:bg-navy-50; }
+  .section-title { @apply font-display text-xl font-semibold text-navy; }
+  .stat-num { @apply font-display text-3xl font-semibold leading-none text-navy; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

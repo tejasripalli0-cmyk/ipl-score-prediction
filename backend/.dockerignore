@@ -1,0 +1,5 @@
+.venv
+__pycache__
+tests
+saved_models_compressed
+.env

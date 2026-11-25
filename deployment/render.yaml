@@ -1,0 +1,14 @@
+# Render blueprint for the API. See README "Public deployment" first: the models need ~600 MB RAM.
+services:
+  - type: web
+    name: ipl-insight-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: starter          # free (512 MB) is too small for the 120 MB first-innings forest + dataset
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGINS
+        value: https://YOUR-FRONTEND.vercel.app
+      - key: CORS_ORIGIN_REGEX
+        value: https://YOUR-PROJECT-.*\.vercel\.app
